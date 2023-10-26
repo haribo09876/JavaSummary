@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript6</title>
+  <style>
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+  <script type="text/javascript">
+    // 토글
+    window.onload = function () {
+      var firstInputObj = document.getElementsByTagName("input")[0];
+      var secondInputObj = document.getElementsByTagName("input")[1];
+      var clickStyleStr = "background-color: yellow; border-radius: 2px;";
+      var mouseStyleStr = "background-color: white; border-radius: 0px;";
+
+      function firstClickFnc() {
+        firstInputObj.style = clickStyleStr;
+      }
+      function firstMouseoutFnc() {
+        firstInputObj.style = mouseStyleStr;
+      }
+      function secondClickFnc() {
+        secondInputObj.style = clickStyleStr;
+      }
+      function secondMouseoutFnc() {
+        secondInputObj.style = mouseStyleStr;
+      }
+      firstInputObj.addEventListener("click", firstClickFnc);
+      firstInputObj.addEventListener("mouseout", firstMouseoutFnc);
+      secondInputObj.addEventListener("click", secondClickFnc);
+      secondInputObj.addEventListener("mouseout", secondMouseoutFnc);
+    }
+  </script>
+</head>
+
+<body>
+  Enter your name:
+  <input type="text">
+  <input type="text">
+</body>
+
+</html>

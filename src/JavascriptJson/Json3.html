@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Json3</title>
+	<style>
+		button {
+			width: 150px;
+			height: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		var teamObj = {
+			"teamMemberArr": ["이현수 : 백앤드"
+				, "김태윤 : DB"
+				, "이경준 : 프론트"
+				, "김용원 : Git"
+			]
+		};
+		function teamMemberPrint() {
+			var firstDivObj = document.getElementById("firstDiv");
+			firstDivObj.innerHTML += teamObj.teamMemberArr[0] + "<br>";
+			firstDivObj.innerHTML += teamObj.teamMemberArr[1] + "<br>";
+			firstDivObj.innerHTML += teamObj.teamMemberArr[2] + "<br>";
+			firstDivObj.innerHTML += teamObj.teamMemberArr[3] + "<br>";
+		}
+		function teamMemberAlert() {
+			var firstDivObj = document.getElementById("firstDiv");
+			for (var i = 0; i < 4; i++) {
+				alert(teamObj.teamMemberArr[i]);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="firstDiv">
+	</div>
+	<button onclick="teamMemberPrint()">멤버이름보기</button>
+	<button onclick="teamMemberAlert()">멤버이름보기2</button>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript3</title>
+	<style>
+	</style>
+	<script type="text/javascript">
+		// 지연 로딩
+		window.onload = function () {
+			var myBtnObj = document.getElementById("myBtn");
+			// 그래도 현업에서 사용하는 이벤트 등록 방식
+			// 표준 이벤트 등록 방식
+			// 이벤트대상.addEventListener("이벤트명", 함수명, false);
+			myBtnObj.addEventListener('click', myNameFnc);
+			myBtnObj.addEventListener('mouseover', namelessObj);
+		}
+		// 이름있는 함수
+		function myNameFnc() {
+			alert("이름이 있는 메서드 (새로 등록된 것)");
+		}
+		// 람다식에서 나온 개념 : 익명함수
+		var namelessObj = function () {
+			alert("이름이 없는 메서드");
+		}
+		namelessObj();
+	</script>
+</head>
+
+<body>
+	<div id="eventTest">
+		이제야 알려주네
+	</div>
+	<button id="myBtn">
+		새로운 이벤트 연결 방식
+	</button>
+</body>
+
+</html>

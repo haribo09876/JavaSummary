@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript4</title>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+		var rowNum = 10;
+		var colNum = 8;
+		var gugudanArr = new Array();
+
+		for (var i = 0; i < rowNum; i++) {
+			gugudanArr[i] = new Array();
+		}
+		for (var j = 0; j < colNum; j++) {
+			gugudanArr[0][j] = (j + 2) + "단";
+		}
+		for (var i = 1; i < rowNum; i++) {
+			for (var j = 0; j < colNum; j++) {
+				gugudanArr[i][j] = ((j + 2) * i);
+			}
+		}
+		for (var i = 0; i < rowNum; i++) {
+			for (var j = 0; j < colNum; j++) {
+				document.write(gugudanArr[i][j]);
+				document.write("\t");
+			} document.write("<br>");
+		}
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

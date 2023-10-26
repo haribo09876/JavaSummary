@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript2</title>
+  <style type="text/css">
+
+  </style>
+  <script type="text/javascript">
+    // 2차원 배열 선언법1
+    var nameArr1 = [[1, 2], [3, 4], [5, 6, 7]];
+
+    document.write(nameArr1[0][0]);
+    document.write("<br>");
+    document.write(nameArr1[1][0]);
+    document.write("<br>");
+    document.write(nameArr1[2][0]);
+    document.write("<br>");
+    document.write(nameArr1[2][2]);
+    document.write("<br>");
+
+    // 2차원 배열 선언법2
+    var nameArr2 = new Array();
+
+    nameArr2[0] = new Array();
+    nameArr2[1] = new Array();
+    nameArr2[2] = new Array();
+    var cnt = 1;
+
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < 2; j++) {
+        nameArr2[i][j] = cnt;
+        cnt++;
+      }
+    }
+
+    for (var i = 0; i < nameArr2.length; i++) {
+      for (var j = 0; j < nameArr2[i].length; j++) {
+        document.write(nameArr2[i][j]);
+        document.write("<br>");
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
